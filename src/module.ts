@@ -10,7 +10,19 @@ export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOption
       description: 'Description of panel option',
       defaultValue: 'Default value of text input option',
     })
-    .addBooleanSwitch({
+
+.addColorPicker({
+  path: 'accentColor',
+  name: 'Accent color',
+  description: 'Color used for the circle / highlight',
+  defaultValue: '#3b82f6',
+})
+.addBooleanSwitch({
+  path: 'aiMode',
+  name: 'AI mode (trend/anomaly)',
+  defaultValue: true,
+})
+.addBooleanSwitch({
       path: 'showSeriesCount',
       name: 'Show series counter',
       defaultValue: false,
